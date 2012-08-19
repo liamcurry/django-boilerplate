@@ -26,7 +26,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.admin',
     'django_extensions',
-    'project.convert',
+    'project.{{ project_name }}',
 )
 LANGUAGE_CODE = 'en-us'
 LOGGING = {
