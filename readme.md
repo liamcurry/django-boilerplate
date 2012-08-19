@@ -11,7 +11,9 @@ django-admin.py startproject --template https://github.com/liamcurry/django-boil
 
 ## Features
 
-* `make` will compile [LESS](http://lesscss.org/), [SASS](http://sass-lang.com/),
+* `make` will create a virtual environment, install requirements, and compile
+  assets.
+* `make assets` will compile [LESS](http://lesscss.org/), [SASS](http://sass-lang.com/),
   [Stylus](http://learnboost.github.com/stylus/), and
   [CoffeeScript](http://coffeescript.org/) automatically. It will also minify and
   gzip all generated CSS and JS files. Use
@@ -19,3 +21,8 @@ django-admin.py startproject --template https://github.com/liamcurry/django-boil
   automatically when there are changes made.
 * `make clean` will remove common trash files, along with generated and minified
   CSS/JS files.
+
+## TODO
+
+* Better documentation.
+* Structure for project testing and documentation
