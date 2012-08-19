@@ -26,3 +26,4 @@ django-admin.py startproject --template https://github.com/liamcurry/django-boil
 
 * Better documentation.
 * Structure for project testing and documentation
+* Sample git hooks for deployment, style checking, etc.
