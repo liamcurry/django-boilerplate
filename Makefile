@@ -61,7 +61,7 @@ clean:
 # Helpers
 # -------
 
-.PHONY: run reset create_ve create_fixture shell reset
+.PHONY: run reset create_ve create_fixture shell
 
 run:
 	@$(DJANGO) runserver_plus
