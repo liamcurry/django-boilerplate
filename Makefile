@@ -32,7 +32,7 @@ CLEANUP = $(shell find . -name '*.pyc' -or -name '.sass-cache' -or -name '.DS_St
 all: $(CSS) $(CSS_MIN) $(CSS_MIN_GZ) $(JS) $(JS_MIN) $(JS_MIN_GZ)
 
 %.css: %.styl
-	stylus < $< > $@
+	stylus --use nib < $< > $@
 
 %.css: %.sass
 	sass --compass $< > $@
