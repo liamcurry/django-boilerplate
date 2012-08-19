@@ -5,7 +5,9 @@ some of my personal preferences and directory structure.
 
 You can use it yourself by running this command (if using Django 1.4+):
 
-`django-admin.py startproject --template https://github.com/liamcurry/django-boilerplate/zipball/master project_name`
+```
+django-admin.py startproject --template https://github.com/liamcurry/django-boilerplate/zipball/master project_name
+```
 
 ## Features
 
