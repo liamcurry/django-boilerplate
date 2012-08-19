@@ -1,0 +1,20 @@
+# System files
+.DS_Store
+
+# Local settings
+settings/local.py
+
+# Python
+*.py[co]
+*.egg-info
+pip-log.txt
+.ve
+
+# Editors
+*.sw[po]
+
+# Static
+.sass-cache
+*.gz
+*.min.css
+*.min.js

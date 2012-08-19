@@ -1,0 +1,4 @@
+django
+django-extensions
+psycopg2
+south
