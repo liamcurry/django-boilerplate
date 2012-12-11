@@ -60,9 +60,13 @@ js: $(JS_TARGETS)
 %.gz: %
 	gzip -9 <$< >$@
 
-$(VIRTUALENV_LOC):
+$(VIRTUALENV_LOC): virtualenv.py
 	./bin/virtualenv.py $(VIRTUALENV_LOC) $(VIRTUALENV_FLAGS)
-	$(VIRTUALENV_LOC)/bin/pip install -r requirements/prod.txt
+	$(VIRTUALENV_LOC)/bin/pip install -r requirements/dev.txt
+
+virtualenv.py:
+	curl -o ./bin/virtualenv.py https://raw.github.com/pypa/virtualenv/master/virtualenv.py
+	chmod +x ./bin/virtualenv.py
 
 clean:
 	rm -Rf $(CSS_TARGETS) $(JS_TARGETS) $(VIRTUALENV_LOC)
