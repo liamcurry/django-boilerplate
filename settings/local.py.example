@@ -1,0 +1,16 @@
+ADMINS = MANAGERS = (
+    ('Name', 'first.last@wpost.com'),
+)
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': '',
+        'HOST': '',
+        'USER': '',
+        'PASSWORD': '',
+    }
+}
+DEBUG = TEMPLATE_DEBUG = False
+SECRET_KEY = 'secret_key'
+STATIC_ROOT = ''
+STATIC_URL = '/static/'

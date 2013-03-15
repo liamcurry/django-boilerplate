@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Login</h2>
+  <form action=. method=post>
+    {{ csrf() }}
+    {{ form.as_ul() }}
+    <button type=submit>Login</button>
+  </form>
+  <p>
+    Don't have an account? <a href={{ url('auth:signup') }}>Signup</a>
+{% endblock %}

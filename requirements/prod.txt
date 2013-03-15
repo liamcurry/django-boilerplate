@@ -2,3 +2,10 @@ django
 django-extensions
 psycopg2
 south
+
+jinja2
+jingo
+
+django-assets
+git+https://github.com/miracle2k/webassets.git#egg=webassets
+yuicompressor
