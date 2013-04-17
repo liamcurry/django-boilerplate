@@ -2,7 +2,7 @@
 .DS_Store
 
 # Local settings
-local.py
+settings_local.py
 
 # Python
 *.py[co]

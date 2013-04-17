@@ -4,10 +4,8 @@ from django.conf.urls import patterns, include
 # from django.contrib import admin
 # admin.autodiscover()
 
-urlpatterns = patterns('apps.{{ project_name }}.views',
-    (r'^$', 'home', {}, 'home'),
-    (r'^', include('apps.auth.urls', 'auth')),
-
+urlpatterns = patterns('{{ project_name }}.views',
+    (r'^$', 'index', {}, 'index'),
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 

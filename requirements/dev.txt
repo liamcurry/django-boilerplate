@@ -1,4 +1,0 @@
--r prod.txt
-ipython
-Werkzeug
-django-debug-toolbar

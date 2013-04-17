@@ -1,0 +1,8 @@
+{
+  "name": "{{ project_name }}",
+  "preferGlobal": false,
+  "dependencies": {
+    "stylus": "*",
+    "nib": "*"
+  }
+}

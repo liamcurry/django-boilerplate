@@ -1,0 +1,25 @@
+<!doctype html>
+<meta charset=utf-8>
+<title>{% block title %}Untitled{% endblock %}</title>
+{% block css %}
+  {% assets filters='yui_css,stylus', output='css/packed.min.css', 'layout.styl' %}
+    <link rel=stylesheet href={{ ASSET_URL }}>
+  {% endassets %}
+{% endblock %}
+
+<header id=header>
+  <a id=brand href={{ url('home') }}>{{ project_name }}</a>
+</header>
+<section id=content>
+  {% block content %}
+  {% endblock %}
+</section>
+<footer id=footer>
+  © Copyright
+</footer>
+
+{% block js %}
+  {% assets filters='yui_js', output='js/packed.min.js', 'js/main.js' %}
+    <script src={{ STATIC_URL }}js/main.js></script>
+  {% endassets %}
+{% endblock %}

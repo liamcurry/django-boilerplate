@@ -1,6 +1,7 @@
 ADMINS = MANAGERS = (
-    ('Name', 'first.last@wpost.com'),
+    ('Your Name', 'your_email@example.com'),
 )
+ALLOWED_HOSTS = ['localhost', ]
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -10,7 +11,4 @@ DATABASES = {
         'PASSWORD': '',
     }
 }
-DEBUG = TEMPLATE_DEBUG = False
-SECRET_KEY = 'secret_key'
-STATIC_ROOT = ''
-STATIC_URL = '/static/'
+DEBUG = True
