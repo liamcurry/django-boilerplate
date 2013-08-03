@@ -20,7 +20,7 @@ RELOAD_NGINX = $(shell $(FIND) -name "*.py" -or -name "config/nginx/*")
 RELOAD_UWSGI = $(shell $(FIND) -name "*.html")
 
 all: clean build
-build: build_ve build_reqs build_settings build_static
+build: build_ve build_reqs build_settings build_static build_db
 build_css: main.min.css
 build_css_gz: main.min.css.gz
 build_js: main.min.js
