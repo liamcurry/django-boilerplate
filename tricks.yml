@@ -1,0 +1,15 @@
+tricks:
+- watchdog.tricks.ShellCommandTrick:
+    patterns: ['*.py', '*.uwsgi.ini', '*.html']
+    shell_command: 'sudo make reload_uwsgi'
+- watchdog.tricks.ShellCommandTrick:
+    patterns: ['config/nginx/*']
+    shell_command: 'sudo make reload_nginx'
+- watchdog.tricks.ShellCommandTrick:
+    patterns: ['*.css', '*.styl']
+    ignore_patterns: ['*.min.css']
+    shell_command: 'make build_css'
+- watchdog.tricks.ShellCommandTrick:
+    patterns: ['*.js']
+    ignore_patterns: ['*.min.js']
+    shell_command: 'make build_js'

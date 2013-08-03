@@ -1,0 +1,10 @@
+-r requirements.txt
+
+# dev
+ipython
+werkzeug
+django-debug-toolbar
+
+# auto rebuild/testing
+watchdog
+git+git://github.com/yejianye/watchdog-tricks.git

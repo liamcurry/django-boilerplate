@@ -1,0 +1,18 @@
+{
+    "index" : {
+        "analysis" : {
+            "analyzer" : {
+                "synonym" : {
+                    "tokenizer" : "whitespace",
+                    "filter" : ["synonym"]
+                }
+            },
+            "filter" : {
+                "synonym" : {
+                    "type" : "synonym",
+                    "synonyms_path" : "synonym.txt"
+                }
+            }
+        }
+    }
+}

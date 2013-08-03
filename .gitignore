@@ -2,7 +2,7 @@
 .DS_Store
 
 # Local settings
-settings_local.py
+prod.py
 
 # Python
 *.py[co]
@@ -18,3 +18,6 @@ pip-log.txt
 *.gz
 *.min.css
 *.min.js
+
+_media
+_public

@@ -1,14 +1,15 @@
 {% extends 'layout.html' %}
 
-{% block title %}Signup{% endblock %}
+{% block title %}Signin{% endblock %}
 
 {% block content %}
-  <h1>Signup</h1>
+  <h1>Signin</h1>
   <form action={{ request.get_full_path() }} method=post>
     {{ csrf() }}
     <ul>
       {{ form.as_ul() }}
     </ul>
-    <button type=submit>Signup</button>
+    <button type=submit>Signin</button>
   </form>
+  <p>Don't have an account? <a href={{ url('register') }}>Signup</a>
 {% endblock %}

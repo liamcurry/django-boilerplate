@@ -1,0 +1,2 @@
+cygni ALL=NOPASSWD: uwsgi
+cygni ALL=NOPASSWD: nginx

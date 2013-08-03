@@ -9,13 +9,6 @@ You can use it yourself by running this command (if using Django 1.4+)::
 
     django-admin.py startproject --template https://github.com/liamcurry/django-boilerplate/zipball/master project_name
 
-Features
---------
-
-- Automatic Stylus, SASS, Compass, and LESS compliation via `webassets`_.
-- Automatic combining and minifying of CSS/JS assets via `webassets`_.
-- Jinja2 templates via `jingo`_.
-
 TODO
 ----
 
