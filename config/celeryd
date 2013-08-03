@@ -30,4 +30,4 @@ CELERYD_PID_FILE="/site/pids/celery/%n.pid"
 #CELERYD_GROUP="celery"
 
 # Name of the projects settings module.
-export DJANGO_SETTINGS_MODULE="auxal.settings.active"
+export DJANGO_SETTINGS_MODULE="{{ project_name }}.settings.active"

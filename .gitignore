@@ -1,6 +1,11 @@
 # System files
 .DS_Store
 
+# ssl certs
+*.csr
+*.key
+*.crt
+
 # Local settings
 prod.py
 
