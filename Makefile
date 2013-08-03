@@ -1,8 +1,8 @@
 APPNAME = {{ project_name }}
 DEST = `pwd`
 STATIC_ROOT = $(APPNAME)/static
-PUBLIC_ROOT = public
-MEDIA_ROOT = public_media
+PUBLIC_ROOT = _public
+MEDIA_ROOT = _media
 STYLUS = node node_modules/.bin/stylus
 UGLIFYJS = node node_modules/.bin/uglifyjs
 YUICOMPRESSOR = yuicompressor
@@ -13,7 +13,7 @@ REQS = requirements.txt
 MANAGE = $(ACTIVATE); python manage.py
 NGINX = /usr/local/nginx/sbin/nginx
 UWSGI = $(VE_LOC)/bin/uwsgi
-ENV = prod
+ENV = dev
 R_JS = node node_modules/.bin/r.js
 FIND = find . -name "$(VE_LOC)" -prune -or
 RELOAD_NGINX = $(shell $(FIND) -name "*.py" -or -name "config/nginx/*")
@@ -26,7 +26,7 @@ build_css_gz: main.min.css.gz
 build_js: main.min.js
 build_js_gz: main.min.js.gz
 build_ve: $(VE_LOC)
-clean: clean_pyc clean_osx clean_ve clean_static clean_settings
+clean: clean_pyc clean_os clean_ve clean_static clean_settings
 restart_web: restart_uwsgi restart_nginx
 restart_cron: restart_celery
 restart_db: restart_postgresql
@@ -42,6 +42,9 @@ $(VE_LOC):
 
 clean_ve:
 	rm -Rf $(VE_LOC)
+
+clean_os:
+	find . -name ".DS_Store" -delete
 
 build_settings:
 	ln -s $(ENV).py $(DEST)/$(APPNAME)/settings/active.py

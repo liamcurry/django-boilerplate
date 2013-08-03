@@ -1,0 +1,27 @@
+from .common import *
+
+
+ADMINS = MANAGERS = (('Admin', 'admin@site.com'), )
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'db_name',
+        'USER': 'db_user',
+        'PASSWORD': 'db_password',
+        'HOST': 'localhost'
+    }
+}
+
+ASSETS_DEBUG = TEMPLATE_DEBUG = DEBUG = False
+SECRET_KEY = {{ secret_key }}
+
+AWS_ACCESS_KEY_ID = ''
+AWS_SECRET_ACCESS_KEY = ''
+
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+
+GOOGLE_ANALYTICS_KEY = 'UA-29170553-1'
+
+
+from . import monkey
