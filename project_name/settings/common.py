@@ -57,8 +57,7 @@ LOGGING = {
         'logfile': {
             'level': 'INFO',
             'class': 'logging.handlers.RotatingFileHandler',
-            'filename': join(ROOT_PATH, 'logs', 'django',
-                             'django.log'),
+            'filename': join(ROOT_PATH, 'logs', 'django.log'),
             'maxBytes': 50000,
             'backupCount': 2,
             'formatter': 'standard',
@@ -120,7 +119,6 @@ STATIC_ROOT = join(ROOT_PATH, '_public')
 STATIC_URL = '/public/'
 STATICFILES_DIRS = (
     join(ROOT_PATH, '{{ project_name }}', 'static'),
-    join(ROOT_PATH, '{{ project_name }}', 'stylus'),
 )
 
 
