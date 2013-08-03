@@ -2,24 +2,22 @@
 <meta charset=utf-8>
 <title>{% block title %}Untitled{% endblock %}</title>
 {% block css %}
-  {% assets filters='yui_css,stylus', output='css/packed.min.css', 'layout.styl' %}
-    <link rel=stylesheet href={{ ASSET_URL }}>
-  {% endassets %}
+  <link rel=stylesheet href={{ url('static', 'main.min.css') }}>
 {% endblock %}
 
-<header id=header>
-  <a id=brand href={{ url('home') }}>{{ project_name }}</a>
-</header>
-<section id=content>
-  {% block content %}
-  {% endblock %}
-</section>
-<footer id=footer>
-  © Copyright
-</footer>
+<div id=container>
+  <header id=header>
+    <a id=brand href={{ url('home') }}>{{ project_name }}</a>
+  </header>
+  <section id=content>
+    {% block content %}
+    {% endblock %}
+  </section>
+  <footer id=footer>
+    © Copyright
+  </footer>
+</div>
 
 {% block js %}
-  {% assets filters='yui_js', output='js/packed.min.js', 'js/main.js' %}
-    <script src={{ STATIC_URL }}js/main.js></script>
-  {% endassets %}
+  <script src={{ url('static', 'main.min.js' }}></script>
 {% endblock %}

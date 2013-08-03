@@ -11,7 +11,7 @@ some of my personal preferences and directory structure.
 You can use it yourself by running this command (if using Django 1.4+)::
 
     django-admin.py startproject --template=https://github.com/liamcurry/django-boilerplate/zipball/master \
-                                 --extensions=py,rst,in,ini,conf \
+                                 --extensions=py,rst,in,ini,conf,json \
                                  --name=Makefile,config/celeryd \
                                  project_name
 

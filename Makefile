@@ -1,14 +1,14 @@
 APPNAME = {{ project_name }}
 DEST = `pwd`
+ACTIVATE = source $(VE_LOC)/bin/activate
 STATIC_ROOT = $(APPNAME)/static
 PUBLIC_ROOT = _public
 MEDIA_ROOT = _media
 STYLUS = node node_modules/.bin/stylus
 UGLIFYJS = node node_modules/.bin/uglifyjs
-YUICOMPRESSOR = yuicompressor
+YUICOMPRESSOR = $(VE_LOC)/bin/yuicompressor
 VE = python bin/virtualenv.py
 VE_LOC = venv
-ACTIVATE = source $(VE_LOC)/bin/activate
 REQS = requirements.txt
 MANAGE = $(ACTIVATE); python manage.py
 NGINX = /usr/local/nginx/sbin/nginx
@@ -81,9 +81,6 @@ clean_static:
 
 reset_static: clean_static build_static
 
-clean_os:
-	find . -name ".DS_Store" -delete
-
 clean_pyc:
 	find . -name "*.pyc" -delete
 
@@ -140,11 +137,13 @@ restart_uwsgi:
 	$(UWSGI) --ini config/uwsgi.ini --reload pids/uwsgi.pid
 
 %.min.css: $(STATIC_ROOT)/styl/%.styl
+	$(ACTIVATE); \
 	$(STYLUS) -u nib -I $(STATIC_ROOT)/css -c --include-css \
 								-I $(STATIC_ROOT)/styl < $< | \
 	$(YUICOMPRESSOR) --type css > $(STATIC_ROOT)/build/$@
 
 %.min.css.gz: $(STATIC_ROOT)/styl/%.styl
+	$(ACTIVATE); \
 	$(STYLUS) -u nib -I $(STATIC_ROOT)/css -c --include-css \
 								-I $(STATIC_ROOT)/styl < $< | \
 	$(YUICOMPRESSOR) --type css | \
