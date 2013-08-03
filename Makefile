@@ -37,7 +37,7 @@ stop_web: stop_uwsgi stop_nginx
 stop_cron: stop_celery
 stop_db: stop_postgresql
 
-build_ve:
+$(VE_LOC):
 	$(VE) $(VE_LOC) --no-site-packages
 
 clean_ve:
